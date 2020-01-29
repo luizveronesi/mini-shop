@@ -16,17 +16,20 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Customer {
+public class Supplier {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(nullable = false, length = 40)
-    private String firstName;
+    private String companyName;
 
     @Column(nullable = false, length = 40)
-    private String lastName;
+    private String contactName;
+
+    @Column(nullable = false, length = 40)
+    private String contactTitle;
 
     @Column(nullable = false, length = 40)
     private String city;
@@ -36,4 +39,7 @@ public class Customer {
 
     @Column(nullable = false, length = 40)
     private String phone;
+
+    @Column(nullable = false, length = 40)
+    private String fax;
 }

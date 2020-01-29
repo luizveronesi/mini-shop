@@ -1,10 +1,11 @@
 spring:
+  profiles: default
   servlet:
     multipart:
       enabled: false
   datasource:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url: jdbc:sqlserver://192.168.1.8:1433;databaseName=decola
+    url: jdbc:sqlserver://devops.texugo.com.br:1433;databaseName=decola
     username: decola
     password: 'decola'
   jpa:
@@ -19,5 +20,22 @@ spring:
         enable_lazy_load_no_trans: true          
 server:
   port: 8080
+  servlet:
+    contextPath: /
+
+---
+
+spring:
+  profiles: prod
+  servlet:
+    multipart:
+      enabled: false
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://banco.producao:2433;databaseName=decola
+    username: decola
+    password: '!!!decola9!'
+server:
+  port: 8081
   servlet:
     contextPath: /

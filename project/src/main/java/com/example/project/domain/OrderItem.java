@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,24 +18,23 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Customer {
+public class OrderItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, length = 40)
-    private String firstName;
+    @Column(nullable = false)
+    private Double unitPrice;
 
-    @Column(nullable = false, length = 40)
-    private String lastName;
+    @Column(nullable = false)
+    private Integer quantity;
 
-    @Column(nullable = false, length = 40)
-    private String city;
+    @ManyToOne
+    @JoinColumn(name= "OrderId")
+    private Order order;
 
-    @Column(nullable = false, length = 40)
-    private String country;
-
-    @Column(nullable = false, length = 40)
-    private String phone;
+    @ManyToOne
+    @JoinColumn(name= "ProductId")
+    private Product product;
 }
