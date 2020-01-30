@@ -28,8 +28,9 @@ public class ProductService {
 		
 		if (!dir.exists()) dir.mkdir();
 		
-		String filename = file.getName();
+		String filename = file.getOriginalFilename();
 		File destFile = new File(dir + File.separator + filename);
+		
 		try {
 			FileUtils.copyInputStreamToFile(file.getInputStream(), destFile);
 		} catch (IOException e) {
