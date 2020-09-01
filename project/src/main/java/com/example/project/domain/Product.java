@@ -21,6 +21,7 @@ import lombok.NoArgsConstructor;
 public class Product {
 
     @Id
+    @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
@@ -37,6 +38,6 @@ public class Product {
     private Boolean isDiscontinued;
 
     @ManyToOne
-    @JoinColumn(name= "ProductId")
-    private Product product;
+    @JoinColumn(name= "SupplierId")
+    private Supplier supplier;
 }
