@@ -1,5 +1,8 @@
 package com.example.project.service;
 
+import java.util.List;
+
+import com.example.project.domain.Product;
 import com.example.project.repository.ProductRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,4 +14,7 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
+	public List<Product> findAll() {
+		return productRepository.findAll();
+	}
 }
