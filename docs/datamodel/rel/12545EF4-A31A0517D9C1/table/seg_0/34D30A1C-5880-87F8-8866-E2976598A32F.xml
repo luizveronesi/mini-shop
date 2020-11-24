@@ -1,0 +1,142 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="34D30A1C-5880-87F8-8866-E2976598A32F" name="OrderItem">
+<sourceDDLFile>schema-decola.sql</sourceDDLFile>
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<importedID>023B24A7-265D-F20B-768F-85211EAABB86</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="7C05FC9F-FC59-DDBB-8A5A-9EDF14688104">
+<sourceDDLFile>schema-decola.sql</sourceDDLFile>
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<importedID>D8A8DD4F-7B6D-4702-E714-BA0CFB7EED1E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>08710A4B-B2C7-6CD3-210E-5FF3731904FD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OrderId" id="BD11B80E-3110-401C-EF00-115B795C2CBD">
+<sourceDDLFile>schema-decola.sql</sourceDDLFile>
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<importedID>589D32D7-577D-0F35-B579-687821217336</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>08710A4B-B2C7-6CD3-210E-5FF3731904FD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0ADF085B-A025-8C7A-DD91-BD4359EEBA46" referredColumn="B0617C92-C15A-2AD3-6C1A-99820F329BB5"/>
+</associations>
+</Column>
+<Column name="ProductId" id="C166C48F-8FD4-FC87-DAAB-3BE1927F195A">
+<sourceDDLFile>schema-decola.sql</sourceDDLFile>
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<importedID>E1E8F709-F0F5-D772-D141-AB84734D5AAE</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>08710A4B-B2C7-6CD3-210E-5FF3731904FD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6F4EE8AD-F3B5-D976-6112-6F2CDE4DBE9D" referredColumn="E4F901A1-C1AA-C1FA-DA4D-2EAAE332767E"/>
+</associations>
+</Column>
+<Column name="UnitPrice" id="67438A87-A80A-953F-54A7-986C3A20F8A0">
+<sourceDDLFile>schema-decola.sql</sourceDDLFile>
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<importedID>D43675A7-3593-AD1B-37BD-141CA1AE7938</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>693C1B82-2264-9ECF-E33B-3B6127803C08</domain>
+<usesDefaultValue>true</usesDefaultValue>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Quantity" id="09790CC1-BB3B-59B6-BD23-70F7AAAAB941">
+<sourceDDLFile>schema-decola.sql</sourceDDLFile>
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<importedID>1A1B44D2-4235-1E99-08FC-61E13BC04AA2</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>08710A4B-B2C7-6CD3-210E-5FF3731904FD</domain>
+<usesDefaultValue>true</usesDefaultValue>
+<defaultValue>1</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A131AE87-B456-B82E-7151-6EC5C013AE64" name="PK_ORDERITEM">
+<sourceDDLFile>schema-decola.sql</sourceDDLFile>
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<importedID>326828E7-7916-7B60-2A3C-CFB20D57C34F</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C05FC9F-FC59-DDBB-8A5A-9EDF14688104"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B1ECD02C-5E2B-23E4-FB8E-68BB610CC5EB" name="IndexOrderItemOrderId">
+<sourceDDLFile>schema-decola.sql</sourceDDLFile>
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<importedID>8F501546-7CCB-F38F-64D8-289971651A63</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BD11B80E-3110-401C-EF00-115B795C2CBD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C5AEAAC0-6068-D009-6C18-76D627AD7A1B" name="IndexOrderItemProductId">
+<sourceDDLFile>schema-decola.sql</sourceDDLFile>
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<importedID>5A9ABAD8-16E7-52E3-EE67-0E9F95E25134</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C166C48F-8FD4-FC87-DAAB-3BE1927F195A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="161FDD85-0B82-E627-013D-3B0F4FEB8C96" name="FK_ORDERITE_REFERENCE_ORDER">
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BD11B80E-3110-401C-EF00-115B795C2CBD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2C1D46E5-DC0C-304E-14E8-75FA3E2CA140" name="FK_ORDERITE_REFERENCE_PRODUCT">
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C166C48F-8FD4-FC87-DAAB-3BE1927F195A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
