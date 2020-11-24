@@ -43,11 +43,6 @@
 <createdTime>2020-11-24 19:08:25 UTC</createdTime>
 <ownerDesignName>datamodel</ownerDesignName>
 </ColumnProxy>
-<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="ContactTitle" id="FDE7836E-CB0E-8985-AEEC-A9AC19BB2B00">
-<createdBy>luiz</createdBy>
-<createdTime>2020-11-24 19:08:25 UTC</createdTime>
-<ownerDesignName>datamodel</ownerDesignName>
-</ColumnProxy>
 </columnProxies>
 <indexProxies>
 <IndexProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.IndexProxySqlServerv2k12" name="IndexSupplierCountry" id="0F82D020-5177-2645-87A2-E08933D0CD36">

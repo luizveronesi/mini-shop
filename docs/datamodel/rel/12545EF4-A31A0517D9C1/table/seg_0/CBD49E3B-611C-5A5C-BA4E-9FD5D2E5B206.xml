@@ -48,19 +48,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="ContactTitle" id="FDE7836E-CB0E-8985-AEEC-A9AC19BB2B00">
-<sourceDDLFile>schema-decola.sql</sourceDDLFile>
-<createdBy>luiz</createdBy>
-<createdTime>2020-11-24 19:08:25 UTC</createdTime>
-<ownerDesignName>datamodel</ownerDesignName>
-<importedID>14D19A76-FD4E-9ABC-7974-969B710729AA</importedID>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<logicalDatatype>LOGDT037</logicalDatatype>
-<domain>9B2BE07F-9A51-94C5-5CAA-0A023D374C6E</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="City" id="C1D24733-60E3-5DEB-F33B-1E34151880A5">
 <sourceDDLFile>schema-decola.sql</sourceDDLFile>
 <createdBy>luiz</createdBy>
