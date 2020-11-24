@@ -25,7 +25,6 @@ public class ProductService {
     public String upload(MultipartFile file, Integer id) {
 		String dirName = File.separator + "temp";
 		File dir = new File(dirName);
-		
 		if (!dir.exists()) dir.mkdir();
 		
 		String filename = file.getName();
