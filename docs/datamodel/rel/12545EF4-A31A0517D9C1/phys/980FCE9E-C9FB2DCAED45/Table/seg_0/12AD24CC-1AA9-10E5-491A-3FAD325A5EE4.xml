@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxySqlServerv2k5 class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.TableProxySqlServerv2k5" name="Product" directorySegmentName="seg_0" id="12AD24CC-1AA9-10E5-491A-3FAD325A5EE4">
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<database>DB_NULLELEMENT</database>
+<schema>C1EDA99C-9496-2EF1-39EA-459AEBA70A63</schema>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="IsDiscontinued" id="2043215E-E7C3-61D6-2B94-18190184A6C1">
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<defaultValue>0</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="PackageName" id="39789A9A-6715-9607-7C17-FFC50B5B9B96">
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="UnitPrice" id="5BF6D0EA-20F7-2ABA-E9AF-4F03E7867F46">
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<defaultValue>0</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="ProductName" id="6E32F718-D573-A5A9-2540-3144AAB07FD1">
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="SupplierId" id="76D6EEB4-574A-FC38-6C77-1E8CF4AF5A4A">
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="Id" id="E4F901A1-C1AA-C1FA-DA4D-2EAAE332767E">
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<asIdentity>true</asIdentity>
+<identityForReplication>YES</identityForReplication>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.IndexProxySqlServerv2k12" name="IndexProductSupplierId" id="772B286E-9D90-C004-2561-64E08B1D92DE">
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<recomputeStatistics>ON</recomputeStatistics>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.IndexProxySqlServerv2k12" name="IndexProductName" id="AD957114-7C31-D5AB-DA6E-0FEBF288E82E">
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<recomputeStatistics>ON</recomputeStatistics>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.FKProxySqlServerv2k5" name="FK_PRODUCT_REFERENCE_SUPPLIER" id="C000C63F-B04B-66BB-4CC0-48274FCAE6E5">
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>schema-decola</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.PKProxySqlServerv2k5" name="PK_PRODUCT" id="1B1F5E39-A4B8-5FF2-E644-9AE3CB9D737D">
+<createdBy>luiz</createdBy>
+<createdTime>2020-11-24 19:08:25 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<clustered>true</clustered>
+</PrimaryKey>
+</primaryKeys>
+</TableProxySqlServerv2k5>
