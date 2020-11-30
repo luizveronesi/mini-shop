@@ -1,147 +1,3 @@
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('"Order"') and o.name = 'FK_ORDER_REFERENCE_CUSTOMER')
-alter table "Order"
-   drop constraint FK_ORDER_REFERENCE_CUSTOMER
-go
-
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('OrderItem') and o.name = 'FK_ORDERITE_REFERENCE_ORDER')
-alter table OrderItem
-   drop constraint FK_ORDERITE_REFERENCE_ORDER
-go
-
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('OrderItem') and o.name = 'FK_ORDERITE_REFERENCE_PRODUCT')
-alter table OrderItem
-   drop constraint FK_ORDERITE_REFERENCE_PRODUCT
-go
-
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('Product') and o.name = 'FK_PRODUCT_REFERENCE_SUPPLIER')
-alter table Product
-   drop constraint FK_PRODUCT_REFERENCE_SUPPLIER
-go
-
-if exists (select 1
-            from  sysindexes
-           where  id    = object_id('Customer')
-            and   name  = 'IndexCustomerName'
-            and   indid > 0
-            and   indid < 255)
-   drop index Customer.IndexCustomerName
-go
-
-if exists (select 1
-            from  sysobjects
-           where  id = object_id('Customer')
-            and   type = 'U')
-   drop table Customer
-go
-
-if exists (select 1
-            from  sysindexes
-           where  id    = object_id('"Order"')
-            and   name  = 'IndexOrderOrderDate'
-            and   indid > 0
-            and   indid < 255)
-   drop index "Order".IndexOrderOrderDate
-go
-
-if exists (select 1
-            from  sysindexes
-           where  id    = object_id('"Order"')
-            and   name  = 'IndexOrderCustomerId'
-            and   indid > 0
-            and   indid < 255)
-   drop index "Order".IndexOrderCustomerId
-go
-
-if exists (select 1
-            from  sysobjects
-           where  id = object_id('"Order"')
-            and   type = 'U')
-   drop table "Order"
-go
-
-if exists (select 1
-            from  sysindexes
-           where  id    = object_id('OrderItem')
-            and   name  = 'IndexOrderItemProductId'
-            and   indid > 0
-            and   indid < 255)
-   drop index OrderItem.IndexOrderItemProductId
-go
-
-if exists (select 1
-            from  sysindexes
-           where  id    = object_id('OrderItem')
-            and   name  = 'IndexOrderItemOrderId'
-            and   indid > 0
-            and   indid < 255)
-   drop index OrderItem.IndexOrderItemOrderId
-go
-
-if exists (select 1
-            from  sysobjects
-           where  id = object_id('OrderItem')
-            and   type = 'U')
-   drop table OrderItem
-go
-
-if exists (select 1
-            from  sysindexes
-           where  id    = object_id('Product')
-            and   name  = 'IndexProductName'
-            and   indid > 0
-            and   indid < 255)
-   drop index Product.IndexProductName
-go
-
-if exists (select 1
-            from  sysindexes
-           where  id    = object_id('Product')
-            and   name  = 'IndexProductSupplierId'
-            and   indid > 0
-            and   indid < 255)
-   drop index Product.IndexProductSupplierId
-go
-
-if exists (select 1
-            from  sysobjects
-           where  id = object_id('Product')
-            and   type = 'U')
-   drop table Product
-go
-
-if exists (select 1
-            from  sysindexes
-           where  id    = object_id('Supplier')
-            and   name  = 'IndexSupplierCountry'
-            and   indid > 0
-            and   indid < 255)
-   drop index Supplier.IndexSupplierCountry
-go
-
-if exists (select 1
-            from  sysindexes
-           where  id    = object_id('Supplier')
-            and   name  = 'IndexSupplierName'
-            and   indid > 0
-            and   indid < 255)
-   drop index Supplier.IndexSupplierName
-go
-
-if exists (select 1
-            from  sysobjects
-           where  id = object_id('Supplier')
-            and   type = 'U')
-   drop table Supplier
-go
-
 /*==============================================================*/
 /* Table: Customer                                              */
 /*==============================================================*/
@@ -166,9 +22,9 @@ FirstName ASC
 go
 
 /*==============================================================*/
-/* Table: "Order"                                               */
+/* Table: "CustomerOrder"                                               */
 /*==============================================================*/
-create table "Order" (
+create table "CustomerOrder" (
    Id                   int                  identity,
    OrderDate            datetime             not null default getdate(),
    OrderNumber          nvarchar(10)         null,
@@ -181,7 +37,7 @@ go
 /*==============================================================*/
 /* Index: IndexOrderCustomerId                                  */
 /*==============================================================*/
-create index IndexOrderCustomerId on "Order" (
+create index IndexOrderCustomerId on "CustomerOrder" (
 CustomerId ASC
 )
 go
@@ -189,7 +45,7 @@ go
 /*==============================================================*/
 /* Index: IndexOrderOrderDate                                   */
 /*==============================================================*/
-create index IndexOrderOrderDate on "Order" (
+create index IndexOrderOrderDate on "CustomerOrder" (
 OrderDate ASC
 )
 go
@@ -285,14 +141,14 @@ Country ASC
 )
 go
 
-alter table "Order"
+alter table "CustomerOrder"
    add constraint FK_ORDER_REFERENCE_CUSTOMER foreign key (CustomerId)
       references Customer (Id)
 go
 
 alter table OrderItem
    add constraint FK_ORDERITE_REFERENCE_ORDER foreign key (OrderId)
-      references "Order" (Id)
+      references "CustomerOrder" (Id)
 go
 
 alter table OrderItem
