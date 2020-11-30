@@ -26,6 +26,16 @@ server:
 ---
 
 spring:
+  profiles: dev
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://devops.texugo.com.br:1434;databaseName=decola
+    username: decola
+    password: '!!!decola9!'
+    
+---
+
+spring:
   profiles: prod
   servlet:
     multipart:
