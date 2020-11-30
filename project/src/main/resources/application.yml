@@ -5,7 +5,7 @@ spring:
       enabled: false
   datasource:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url: jdbc:sqlserver://192.168.1.8:1433;databaseName=decola
+    url: jdbc:sqlserver://127.0.0.1:1433;databaseName=decola
     username: decola
     password: 'decola'
   jpa:
