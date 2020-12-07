@@ -3,8 +3,10 @@ package iteris.minishop.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,8 +21,8 @@ public class OrderController {
 	private OrderService orderService;
 
 	@PostMapping(value = "/page")
-	public ResponseEntity<Page<Order>> list() {
-		return ResponseEntity.ok(orderService.list());
+	public ResponseEntity<Page<Order>> page() {
+		return ResponseEntity.ok(orderService.page(0, 5));
 	}
 
 	@GetMapping(value = "/list")
