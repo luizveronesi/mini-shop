@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 import iteris.minishop.domain.Order;
 
 @Repository
-public interface OrderRepository extends JpaRepository<Order, Integer> {    
+public interface OrderRepository extends JpaRepository<Order, Integer> {
 }
