@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F0D10BE4-A76E-89AA-877B-072FC647A450" name="ProductImage">
+<createdBy>luiz</createdBy>
+<createdTime>2021-06-02 18:14:21 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="C2A08809-AC12-7E06-E3F2-40AB107A5720">
+<createdBy>luiz</createdBy>
+<createdTime>2021-06-02 18:14:50 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Path" id="9127F82E-08C6-0B4F-9095-DECD1FE37A57">
+<createdBy>luiz</createdBy>
+<createdTime>2021-06-02 18:14:50 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SeqExibicao" id="F33269DE-FC3D-366D-BDD1-DFF120F21188">
+<createdBy>luiz</createdBy>
+<createdTime>2021-06-02 18:15:00 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Product_Id" id="407CB535-9550-6A97-61F6-466DA645C4E9">
+<createdBy>luiz</createdBy>
+<createdTime>2021-06-02 18:15:10 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>08710A4B-B2C7-6CD3-210E-5FF3731904FD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DE9BCF3C-268B-FF74-1D7D-4B59BB4636BC" referredColumn="E4F901A1-C1AA-C1FA-DA4D-2EAAE332767E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="298216F0-DDEB-8633-746E-FA0F5D24F25C" name="ProductImage_PK">
+<createdBy>luiz</createdBy>
+<createdTime>2021-06-02 18:14:50 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C2A08809-AC12-7E06-E3F2-40AB107A5720"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="76C2F218-3318-2FF2-5951-8F9D206BA955" name="ProductImage_Product_FK">
+<createdBy>luiz</createdBy>
+<createdTime>2021-06-02 18:15:10 UTC</createdTime>
+<ownerDesignName>datamodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="407CB535-9550-6A97-61F6-466DA645C4E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
