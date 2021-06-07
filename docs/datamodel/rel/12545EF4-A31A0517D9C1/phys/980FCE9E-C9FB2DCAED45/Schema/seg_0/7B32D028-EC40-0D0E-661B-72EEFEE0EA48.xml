@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<SchemaSqlServerv2k5 class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.SchemaSqlServerv2k5" name="SCHEMA1" directorySegmentName="seg_0" id="7B32D028-EC40-0D0E-661B-72EEFEE0EA48">
-<sourceDDLFile>schema-decola.sql</sourceDDLFile>
-<createdBy>luiz</createdBy>
-<createdTime>2020-11-24 19:07:30 UTC</createdTime>
-<ownerDesignName>datamodel</ownerDesignName>
-<database>DB_NULLELEMENT</database>
-</SchemaSqlServerv2k5>

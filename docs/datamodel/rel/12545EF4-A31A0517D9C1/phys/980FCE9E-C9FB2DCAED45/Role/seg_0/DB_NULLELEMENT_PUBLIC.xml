@@ -1,9 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<RoleSqlServerv2k12 class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.RoleSqlServerv2k12" directorySegmentName="seg_0" id="DB_NULLELEMENT_PUBLIC" name="PUBLIC">
-<createdBy>luiz</createdBy>
-<createdTime>2020-11-24 19:07:42 UTC</createdTime>
-<ownerDesignName>datamodel</ownerDesignName>
-<nullInstance>true</nullInstance>
-<storableNullInstance>true</storableNullInstance>
-<database>DB_NULLELEMENT</database>
-</RoleSqlServerv2k12>
